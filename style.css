@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+body{
+    text-align: center;
+}
+
+#right-wheel,#left-wheel{
+    animation: spin 1s linear infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+#hat{
+    animation: bounce 1s ease-in-out infinite;
+}
+#man-bike{
+    animation: move 1s ease-in-out infinite;
+    transform-origin: bottom;
+}
+@keyframes move{
+    0%{
+        transform: rotateX(0);
+    }
+    50%{
+        transform: rotateX(14deg);
+    }
+}
+@keyframes bounce{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+}
+ @keyframes spin{
+     from{
+         transform: rotateZ(0deg);
+     }
+     to{
+         transform: rotateZ(360deg);
+     }
+ }
